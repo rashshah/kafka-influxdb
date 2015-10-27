@@ -37,8 +37,8 @@ class Encoder(object):
                postfix_tag=None,  # Tag to use for Graphite postfix
                ):
         # One message could consist of several measurements
-        for line in msg.split("\n"):
-            series, value, timestamp = line.split()
+        #for line in msg.split("\n"):
+            series, value, timestamp = msg.split()
             # Strip prefix and postfix:
             series = series[len(prefix):len(series) - len(postfix)]
             # Split into tags
